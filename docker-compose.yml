@@ -1,0 +1,9 @@
+services:
+  audit-console:
+    build: .
+    image: first-hit-rule-audit:latest
+    container_name: first-hit-rule-audit
+    ports:
+      # 宿主机 http://localhost:8080 → 容器内 nginx :80
+      - "8080:80"
+    restart: unless-stopped

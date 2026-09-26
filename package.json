@@ -1,0 +1,27 @@
+{
+  "name": "first-hit-rule-audit",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "首命中规则审计台 - 基于首条匹配语义的 ACL 规则遮蔽分析",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "test": "esbuild src/audit.test.ts src/simplify.test.ts src/regression.test.ts src/attribution.test.ts src/exemption.test.ts src/snapshot.test.ts src/tandem.test.ts --bundle --platform=node --format=esm --out-extension:.js=.mjs --outdir=node_modules/.tmp/test && node node_modules/.tmp/test/audit.test.mjs && node node_modules/.tmp/test/simplify.test.mjs && node node_modules/.tmp/test/regression.test.mjs && node node_modules/.tmp/test/attribution.test.mjs && node node_modules/.tmp/test/exemption.test.mjs && node node_modules/.tmp/test/snapshot.test.mjs && node node_modules/.tmp/test/tandem.test.mjs",
+    "test:fuzz": "esbuild src/fuzz.test.ts src/fuzz2.test.ts src/fuzz3.test.ts src/fuzz4.test.ts src/fuzz5.test.ts src/fuzz6.test.ts src/fuzz7.test.ts src/fuzz8.test.ts --bundle --platform=node --format=esm --out-extension:.js=.mjs --outdir=node_modules/.tmp/fuzz && node node_modules/.tmp/fuzz/fuzz.test.mjs && node node_modules/.tmp/fuzz/fuzz2.test.mjs && node node_modules/.tmp/fuzz/fuzz3.test.mjs && node node_modules/.tmp/fuzz/fuzz4.test.mjs && node node_modules/.tmp/fuzz/fuzz5.test.mjs && node node_modules/.tmp/fuzz/fuzz6.test.mjs && node node_modules/.tmp/fuzz/fuzz7.test.mjs && node node_modules/.tmp/fuzz/fuzz8.test.mjs"
+  },
+  "dependencies": {
+    "ipaddr.js": "^2.2.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.4",
+    "esbuild": "^0.24.0",
+    "typescript": "~5.6.3",
+    "vite": "^5.4.11"
+  }
+}
