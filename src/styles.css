@@ -1206,4 +1206,14 @@ button.primary.danger:hover {
   grid-template-columns: minmax(170px, 2fr) minmax(170px, 1.6fr) minmax(90px, 0.8fr) auto;
 }
 
+/* ---- 源地址转换路径分析 ---- */
+.snat-mappings-input {
+  min-height: 74px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 12px;
+  resize: vertical;
+  margin-top: 6px;
+  width: 100%;
+}
+
 
