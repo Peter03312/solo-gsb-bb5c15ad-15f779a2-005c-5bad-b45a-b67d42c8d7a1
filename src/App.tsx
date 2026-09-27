@@ -8,6 +8,7 @@ import { AttributionPanel } from './AttributionPanel'
 import { ExceptionPanel } from './ExceptionPanel'
 import { SnapshotPanel } from './SnapshotPanel'
 import { TandemPanel } from './TandemPanel'
+import { NatPathPanel } from './NatPathPanel'
 import { ImportModal, ExportModal } from './Modals'
 import { ImportExceptionsModal } from './ExceptionImportModal'
 import { ReorderPreviewModal } from './ReorderPreviewModal'
@@ -251,6 +252,10 @@ export default function App() {
 
       <div className="section-gap">
         <TandemPanel rules={rules} />
+      </div>
+
+      <div className="section-gap">
+        <NatPathPanel rules={rules} />
       </div>
 
       <div className="section-gap">
